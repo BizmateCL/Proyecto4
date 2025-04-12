@@ -12,7 +12,7 @@ Consistirá en la gestión de reservas de hoteles para turistas y visitantes de 
 ***Características del proyecto***
 Se contara con un archivo .env y .gitignore. El primero se establecen las variables de entorno. En el segundo estarán las carpetas y archivos que se ocultarán para el repositorio.
 Ademas de ello, cuenta con la siguiente estructura de carpetas:
-![](\assets\estructura_carpetas.png "Estructura de carpetas")
+![](/assets/estructura_carpetas.png "Estructura de carpetas")
 
 ***Aplicación de servicios/peticiones crud con métodos post, get, put, delete que tendra las siguientes caracteristicas:***
 -Creación de reservas de hoteles
@@ -93,7 +93,7 @@ b) Una vez creada la coleccion, crear un metodo POST. Este nombrarlo como Todasl
 C)Posteriormente realizar clic en Send, para insertar el arreglo en el archivo /datos/reservas.json.
 Para verificar si los datos se cargaron, simplemente ingresar a la carpeta y verificarlo.
 A continuacion se presenta un screenshot de Postman del metodo en cuestion:
-![](\assets\TODASLASRESERVAS.png "Todas las reservas")
+![](/assets/TODASLASRESERVAS.png "Todas las reservas")
 nota: Simpre guardar(esquina superior derecha)
 
 ***2. METODO GET, listar reservas***
@@ -111,7 +111,7 @@ Para ello crear en postman con el metodo GET, insertar la siguiente url y realiz
 http://localhost:3000/api/reservas/f43791da-7836-43d1-b872-68d8ab799494
 
 Ver la siguiente imagen:
-![](\assets\busquedaporID.png "Busqueda por ID")
+![](/assets/busquedaporID.png "Busqueda por ID")
 4. METODO DELETE
 5. METODO
 
