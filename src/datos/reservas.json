@@ -5,15 +5,15 @@
     "fecha": "2025-04-16",
     "tipoHabitacion": "suite familiar",
     "adultos": 2,
-    "niños": 1
+    "niños": 5
   },
   {
     "id": "7b5b56d5-e4dc-401c-ab65-0b89991bbe1e",
     "hotel": "Hotel Cabañas el bosque",
     "fecha": "2025-04-10",
-    "tipoHabitacion": "suite",
-    "adultos": 1,
-    "niños": 0
+    "tipoHabitacion": "suite familiar",
+    "adultos": 3,
+    "niños": 2
   },
   {
     "id": "ef05fb47-273b-47b7-a8a4-63633406d0b5",
@@ -27,14 +27,46 @@
     "id": "b267fe66-cdec-484d-a716-299b85897766",
     "hotel": "Hotel Paraíso",
     "fecha": "2025-04-05",
+    "tipoHabitacion": "individual",
+    "adultos": 3,
+    "niños": 2
+  },
+  {
+    "id": "640a0942-c126-46b0-aa9d-1736d06cc840",
+    "hotel": "Hotel Dreams valdivia",
+    "fecha": "2025-04-12",
+    "tipoHabitacion": "doble",
+    "adultos": 2,
+    "niños": 4
+  },
+  {
+    "id": "5e8adc25-542a-422c-9608-4b0f4e1c9df7",
+    "hotel": "Hotel Cabañas el bosque",
+    "fecha": "2025-04-10",
+    "tipoHabitacion": "suite",
+    "adultos": 1,
+    "niños": 0
+  },
+  {
+    "id": "0b421a1f-1787-4c2a-a6bb-576a273b60f8",
+    "hotel": "Hotel Melillanca",
+    "fecha": "2025-04-25",
+    "tipoHabitacion": "individual",
+    "adultos": 1,
+    "niños": 0
+  },
+  {
+    "id": "5a4dc37b-013c-4230-b9b5-8ee53188b50f",
+    "hotel": "Hotel Paraíso",
+    "fecha": "2025-04-05",
     "tipoHabitacion": "doble",
     "adultos": 3,
     "niños": 2
   },
   {
-    "id": "253e175c-7d0c-4e87-a806-bca7e84e382e",
+    "id": "81cdbeae-f8d9-42e6-bacf-0d4d8f54ee3d",
     "hotel": "Hotel Dreams valdivia",
-    "fecha": "2025-04-15",
+    "fecha": "2025-04-28",
     "tipoHabitacion": "suite",
     "adultos": 2,
     "niños": 1
