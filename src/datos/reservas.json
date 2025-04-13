@@ -1,74 +1,47 @@
 [
   {
-    "id": "f43791da-7836-43d1-b872-68d8ab799494",
+    "id": "b8027ba8-273a-4c7c-a2e0-bb1fac34709d",
     "hotel": "Hotel Dreams valdivia",
-    "fecha": "2025-04-16",
-    "tipoHabitacion": "suite familiar",
-    "adultos": 2,
-    "niños": 5
+    "fecha": "2025-04-12",
+    "tipoHabitacion": "doble",
+    "adultos": 3,
+    "niños": 2,
+    "estado_pago": "pagado"
   },
   {
-    "id": "7b5b56d5-e4dc-401c-ab65-0b89991bbe1e",
+    "id": "56eae59d-1e2d-46db-b88a-4b02dadb0286",
     "hotel": "Hotel Cabañas el bosque",
     "fecha": "2025-04-10",
-    "tipoHabitacion": "suite familiar",
-    "adultos": 3,
-    "niños": 2
+    "tipoHabitacion": "suite",
+    "adultos": 1,
+    "niños": 0,
+    "estado_pago": "pagado"
   },
   {
-    "id": "ef05fb47-273b-47b7-a8a4-63633406d0b5",
+    "id": "b69cf353-278b-4253-838b-e730508b834c",
     "hotel": "Hotel Melillanca",
     "fecha": "2025-04-14",
     "tipoHabitacion": "individual",
     "adultos": 1,
-    "niños": 0
+    "niños": 0,
+    "estado_pago": "pendiente"
   },
   {
-    "id": "b267fe66-cdec-484d-a716-299b85897766",
-    "hotel": "Hotel Paraíso",
-    "fecha": "2025-04-05",
-    "tipoHabitacion": "individual",
-    "adultos": 3,
-    "niños": 2
-  },
-  {
-    "id": "640a0942-c126-46b0-aa9d-1736d06cc840",
-    "hotel": "Hotel Dreams valdivia",
-    "fecha": "2025-04-12",
-    "tipoHabitacion": "doble",
-    "adultos": 2,
-    "niños": 4
-  },
-  {
-    "id": "5e8adc25-542a-422c-9608-4b0f4e1c9df7",
-    "hotel": "Hotel Cabañas el bosque",
-    "fecha": "2025-04-10",
-    "tipoHabitacion": "suite",
-    "adultos": 1,
-    "niños": 0
-  },
-  {
-    "id": "0b421a1f-1787-4c2a-a6bb-576a273b60f8",
-    "hotel": "Hotel Melillanca",
-    "fecha": "2025-04-25",
-    "tipoHabitacion": "individual",
-    "adultos": 1,
-    "niños": 0
-  },
-  {
-    "id": "5a4dc37b-013c-4230-b9b5-8ee53188b50f",
+    "id": "80452cd4-16fc-4db4-a31d-3bbc43a7bf67",
     "hotel": "Hotel Paraíso",
     "fecha": "2025-04-05",
     "tipoHabitacion": "doble",
     "adultos": 3,
-    "niños": 2
+    "niños": 3,
+    "estado_pago": "pagado"
   },
   {
-    "id": "81cdbeae-f8d9-42e6-bacf-0d4d8f54ee3d",
+    "id": "19773756-7b9b-4593-b191-d7fc5c158093",
     "hotel": "Hotel Dreams valdivia",
-    "fecha": "2025-04-28",
+    "fecha": "2025-04-15",
     "tipoHabitacion": "suite",
     "adultos": 2,
-    "niños": 1
+    "niños": 1,
+    "estado_pago": "pendiente"
   }
 ]

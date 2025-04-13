@@ -10,7 +10,7 @@ const router = express.Router();
 router.post("/", crearReservas);
 
 router.get("/", (req, res) => {
-  const { tipo_habitacion, fecha_inicio, fecha_fin, hotel, grupos_grandes } = req.query;
+  const { tipo_habitacion, fecha_inicio, fecha_fin, hotel, grupos_grandes, estado_pago } = req.query;
   const reservas = require("../datos/reservas.json");
 
   // Filtro por tipo de habitación
@@ -65,6 +65,19 @@ router.get("/", (req, res) => {
     }
 
     return res.status(200).json(reservasGruposGrandes);
+  }
+
+  // Filtro por estado de pago
+  if (estado_pago) {
+    const reservasFiltradasPorEstado = reservas.filter(
+      (reserva) => reserva.estado_pago.toLowerCase() === estado_pago.toLowerCase()
+    );
+
+    if (reservasFiltradasPorEstado.length === 0) {
+      return res.status(404).send("No hay reservas con el estado de pago solicitado");
+    }
+
+    return res.status(200).json(reservasFiltradasPorEstado);
   }
 
   // Si no hay filtros, devuelve todas las reservas

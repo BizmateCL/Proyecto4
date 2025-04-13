@@ -58,35 +58,40 @@ b) Una vez creada la coleccion, crear un metodo POST. Este nombrarlo como Todasl
     "fecha": "2025-04-12",
     "tipoHabitacion": "doble",
     "adultos": 3,
-    "niños": 2
+    "niños": 2,
+    "estado_pago":"pagado"
   },
   {
     "hotel": "Hotel Cabañas el bosque",
     "fecha": "2025-04-10",
     "tipoHabitacion": "suite",
     "adultos": 1,
-    "niños": 0
+    "niños": 0,
+    "estado_pago":"pagado"
   },
   {
     "hotel": "Hotel Melillanca",
     "fecha": "2025-04-14",
     "tipoHabitacion": "individual",
     "adultos": 1,
-    "niños": 0
+    "niños": 0,
+    "estado_pago":"pendiente"
   },
   {
     "hotel": "Hotel Paraíso",
     "fecha": "2025-04-05",
     "tipoHabitacion": "doble",
     "adultos": 3,
-    "niños": 3
+    "niños": 3,
+    "estado_pago":"pagado"
   },
   {
     "hotel": "Hotel Dreams valdivia",
     "fecha": "2025-04-15",
     "tipoHabitacion": "suite",
     "adultos": 2,
-    "niños": 1
+    "niños": 1,
+    "estado_pago":"pendiente"
   }
 ]
 
@@ -94,7 +99,7 @@ C)Posteriormente realizar clic en Send, para insertar el arreglo en el archivo /
 Para verificar si los datos se cargaron, simplemente ingresar a la carpeta y verificarlo.
 A continuacion se presenta un screenshot de Postman del metodo en cuestion:
 ![](/assets/TODASLASRESERVAS.png "Todas las reservas")
-nota: Simpre guardar(esquina superior derecha)
+
 
 ***2. METODO GET, LISTAR RESERVAS***
 Para realizar este metodo, simplemente crear el metodo post en postman tal como se realizo anteriormentey con la url http://localhost:3000/api/reservas en el metodo.
@@ -104,22 +109,22 @@ Al realizar clic en send, si no hay error, ir a la url para listar las reservas.
 
 Para obtener una reserva por id, se probara con el siguiente id:
 
-f43791da-7836-43d1-b872-68d8ab799494
+5fdfe146-635e-443f-8a1f-f4c5ab80684f
 
 Para ello crear en postman con el metodo GET, insertar la siguiente url y realizar clic en send:
 
-http://localhost:3000/api/reservas/f43791da-7836-43d1-b872-68d8ab799494
+http://localhost:3000/api/reservas/5fdfe146-635e-443f-8a1f-f4c5ab80684f
 
 Ver la siguiente imagen:
 ![](/assets/busquedaporID.png "Busqueda por ID")
 ***4. METODO PUT : ACTUALIZAR RESERVA POR ID*** 
 En el enunciado del ejercicio dice que es necesario cambiar una reserva.Originalmente se reservo una habitación doble, pero ahora se requiere una suite familiar. Se trabajara con cualquier codigo de reserva, por ejemplo el siguiente y se modificara el tipo de habitacion:
 
-b267fe66-cdec-484d-a716-299b85897766
+339117e6-fb86-42cf-9710-910476d68f95
 
 Agregar una nueva request en POSTMAN, con metodo PUT. Este se llamara actualizar reserva.
 El link en postman sera el siguiente:
-http://localhost:3000/api/reservas/b267fe66-cdec-484d-a716-299b85897766
+http://localhost:3000/api/reservas/339117e6-fb86-42cf-9710-910476d68f95
 Posteriormente en la pestaña body, subpestaña RAW, en JSON, insertar la modificacion solicitada:
 
 {
@@ -133,9 +138,9 @@ Realizar clic en send, y posteriormente para verificar , en el codigo json de la
 ***5. METODO DELETE: ELIMINAR RESERVA***
 Para borrar la reserva crear una nueva request, y configurar la solicitud DELETE.
 Ingresar el siguiente URL:
-http://localhost:3000/api/reservas/253e175c-7d0c-4e87-a806-bca7e84e382e
+http://localhost:3000/api/reservas/5829ed3a-52e1-4b31-a4a6-e8726513db5d
 Realizar clic en send. Para verificar que funciono deberia arrojar el mensaje :
-Reserva con ID 253e175c-7d0c-4e87-a806-bca7e84e382e eliminada correctamente
+Reserva con ID 5829ed3a-52e1-4b31-a4a6-e8726513db5d eliminada correctamente
 Ver la siguiente imagen:
 ![](/assets/BorrarReserva.png "Eliminar reserva") 
 ***6. METODO GET : FILTRAR RESERVAS POR TIPO DE HABITACION***
@@ -162,6 +167,16 @@ Crear una nueva request y configurar el metodo get.Para ello, ingresar el siguie
 http://localhost:3000/api/reservas?grupos_grandes=true
 Realizar clic en send.Si hay reservas con 5 o más de 5 invitados, se recibira un arreglo con las reservas correspondientes y el detalle, caso contrario , arrojara el mensaje:
 "No hay reservas para invitados con grupos sobre 5 personas".
+
+***10. METODO GET: RESERVAS PENDIENTES DE PAGO***
+Crear un nuevo request en postman con el metodo get. Asignarle el nombre por ejemplo "PendientesPago".Ingresar el siguiente link para filtrar las reservas con estado de pago "pendiente":
+http://localhost:3000/api/reservas?estado_pago=pendiente
+Realizar clic en send. Ver la siguiente imagen con el resultado:
+![](/assets/PendientePago.png "Pendiente de pago")
+
+
+
+
 
 ***Nota importante: En todos los request, una vez se cree el metodo, siempre guardar***
 
