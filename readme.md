@@ -138,13 +138,13 @@ Realizar clic en send. Para verificar que funciono deberia arrojar el mensaje :
 Reserva con ID 253e175c-7d0c-4e87-a806-bca7e84e382e eliminada correctamente
 Ver la siguiente imagen:
 ![](/assets/BorrarReserva.png "Eliminar reserva") 
-***METODO GET : FILTRAR RESERVAS POR TIPO DE HABITACION***
+***6. METODO GET : FILTRAR RESERVAS POR TIPO DE HABITACION***
 Para filtrar reservas por tipo de habitacion, por ejemplo filtrar las que son "individual", crear una nueva request y configurar la solicitud GET.
 Ingresar la siguiente URL:
 http://localhost:3000/api/reservas?tipo_habitacion=individual
 Si se desea filtrar por otro tipo, modificar el link al final y reemplazar la palabra indivudual por el tipo de habitacion y señalar de que tipo es(suite doble, suite familiar).
 Al realizar clic en send, se desplegara un arreglo con todas las habitaciones individuales.
-***METODO GET: FILTRAR POR FECHAS***
+***7. METODO GET: FILTRAR POR FECHAS***
 Para filtrar por fechade inicio y fecha de termino, crear un nuevo request en POSTMAN con el metodo GET.
 El link es el siguiente:
 http://localhost:3000/api/reservas?fecha_inicio=2025-04-06&fecha_fin=2025-04-10
@@ -152,12 +152,12 @@ En la url, si se desea otro rango de fechas , modificar la fechas actuales.
 Para corroborar si esta bien el metodo, apareceran listadas las habitabiones del rango de fecha solicitada, caso contrario arrojara el mensaje "No hay reservas en la fecha solicitada".
 Ver la siguiente imagen:
 ![](/assets/FiltrarporRangodefechas.png "Filtrar por rango de fechas")
-***METODO GET : FILTRAR RESERVAS POR HOTEL***
+***8. METODO GET : FILTRAR RESERVAS POR HOTEL***
 Crear un nuevo request en postman con el metodo GET. La url es la siguiente:
 http://localhost:3000/api/reservas?hotel=Hotel Paraíso
 Posteriormente realizar clic en send, y los resultados de las reservas filtradas mostraran las reservas del "Hotel Paraiso".
 
-*** METODO GET : FILTRAR POR GRUPOS GRANDES DE HUESPEDES(> A 5 PERSONAS)  ***
+***9. METODO GET : FILTRAR POR GRUPOS GRANDES DE HUESPEDES(> A 5 PERSONAS)  ***
 Crear una nueva request y configurar el metodo get.Para ello, ingresar el siguiente link en postman:
 http://localhost:3000/api/reservas?grupos_grandes=true
 Realizar clic en send.Si hay reservas con 5 o más de 5 invitados, se recibira un arreglo con las reservas correspondientes y el detalle, caso contrario , arrojara el mensaje:
