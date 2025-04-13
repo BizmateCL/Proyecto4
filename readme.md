@@ -40,11 +40,11 @@ Nota: Con esta instruccion , se iniciará el servidor en el puerto 3000 (o el pu
 
 3. Una vez ejecutado el comando , arrojara el mensaje "Servidor escuchando en el puerto 3000". 
 
-***Probar la API en POSTMAN***
+### PROBAR LA API EN POSTMAN
 
 Para probar la API, es necesario los siguientes pasos en POSTMAN:
 
-*** 1. METODO POST, insertar reservas***
+*** 1. METODO POST, INSERTAR RESERVAS***
 
 Este metodo es util para crear  reservas. Para ello realizar lo siguiente:
 
@@ -57,8 +57,8 @@ b) Una vez creada la coleccion, crear un metodo POST. Este nombrarlo como Todasl
     "hotel": "Hotel Dreams valdivia",
     "fecha": "2025-04-12",
     "tipoHabitacion": "doble",
-    "adultos": 2,
-    "niños": 1
+    "adultos": 3,
+    "niños": 2
   },
   {
     "hotel": "Hotel Cabañas el bosque",
@@ -79,7 +79,7 @@ b) Una vez creada la coleccion, crear un metodo POST. Este nombrarlo como Todasl
     "fecha": "2025-04-05",
     "tipoHabitacion": "doble",
     "adultos": 3,
-    "niños": 2
+    "niños": 3
   },
   {
     "hotel": "Hotel Dreams valdivia",
@@ -96,11 +96,11 @@ A continuacion se presenta un screenshot de Postman del metodo en cuestion:
 ![](/assets/TODASLASRESERVAS.png "Todas las reservas")
 nota: Simpre guardar(esquina superior derecha)
 
-***2. METODO GET, listar reservas***
+***2. METODO GET, LISTAR RESERVAS***
 Para realizar este metodo, simplemente crear el metodo post en postman tal como se realizo anteriormentey con la url http://localhost:3000/api/reservas en el metodo.
 Al realizar clic en send, si no hay error, ir a la url para listar las reservas.
 
-3. ***. METODO GET, Obtener reserva por id***
+***3. METODO GET, OBTENER RESERVA POR ID***
 
 Para obtener una reserva por id, se probara con el siguiente id:
 
@@ -112,8 +112,66 @@ http://localhost:3000/api/reservas/f43791da-7836-43d1-b872-68d8ab799494
 
 Ver la siguiente imagen:
 ![](/assets/busquedaporID.png "Busqueda por ID")
-4. METODO DELETE
-5. METODO
+***4. METODO PUT : ACTUALIZAR RESERVA POR ID*** 
+En el enunciado del ejercicio dice que es necesario cambiar una reserva.Originalmente se reservo una habitación doble, pero ahora se requiere una suite familiar. Se trabajara con cualquier codigo de reserva, por ejemplo el siguiente y se modificara el tipo de habitacion:
+
+b267fe66-cdec-484d-a716-299b85897766
+
+Agregar una nueva request en POSTMAN, con metodo PUT. Este se llamara actualizar reserva.
+El link en postman sera el siguiente:
+http://localhost:3000/api/reservas/b267fe66-cdec-484d-a716-299b85897766
+Posteriormente en la pestaña body, subpestaña RAW, en JSON, insertar la modificacion solicitada:
+
+{
+  "tipoHabitacion": "suite familiar"
+}
+
+Realizar clic en send, y posteriormente para verificar , en el codigo json de la seccion inferior se puede verificar que se modifico el tipo de habitacion por familiar (ver la siguiente imagen).
+
+![](/assets/actualizar_reserva.png)
+
+***5. METODO DELETE: ELIMINAR RESERVA***
+Para borrar la reserva crear una nueva request, y configurar la solicitud DELETE.
+Ingresar el siguiente URL:
+http://localhost:3000/api/reservas/253e175c-7d0c-4e87-a806-bca7e84e382e
+Realizar clic en send. Para verificar que funciono deberia arrojar el mensaje :
+Reserva con ID 253e175c-7d0c-4e87-a806-bca7e84e382e eliminada correctamente
+Ver la siguiente imagen:
+![](/assets/BorrarReserva.png "Eliminar reserva") 
+***METODO GET : FILTRAR RESERVAS POR TIPO DE HABITACION***
+Para filtrar reservas por tipo de habitacion, por ejemplo filtrar las que son "individual", crear una nueva request y configurar la solicitud GET.
+Ingresar la siguiente URL:
+http://localhost:3000/api/reservas?tipo_habitacion=individual
+Si se desea filtrar por otro tipo, modificar el link al final y reemplazar la palabra indivudual por el tipo de habitacion y señalar de que tipo es(suite doble, suite familiar).
+Al realizar clic en send, se desplegara un arreglo con todas las habitaciones individuales.
+***METODO GET: FILTRAR POR FECHAS***
+Para filtrar por fechade inicio y fecha de termino, crear un nuevo request en POSTMAN con el metodo GET.
+El link es el siguiente:
+http://localhost:3000/api/reservas?fecha_inicio=2025-04-06&fecha_fin=2025-04-10
+En la url, si se desea otro rango de fechas , modificar la fechas actuales.
+Para corroborar si esta bien el metodo, apareceran listadas las habitabiones del rango de fecha solicitada, caso contrario arrojara el mensaje "No hay reservas en la fecha solicitada".
+Ver la siguiente imagen:
+![](/assets/FiltrarporRangodefechas.png "Filtrar por rango de fechas")
+***METODO GET : FILTRAR RESERVAS POR HOTEL***
+Crear un nuevo request en postman con el metodo GET. La url es la siguiente:
+http://localhost:3000/api/reservas?hotel=Hotel Paraíso
+Posteriormente realizar clic en send, y los resultados de las reservas filtradas mostraran las reservas del "Hotel Paraiso".
+
+*** METODO GET : FILTRAR POR GRUPOS GRANDES DE HUESPEDES(> A 5 PERSONAS)  ***
+Crear una nueva request y configurar el metodo get.Para ello, ingresar el siguiente link en postman:
+http://localhost:3000/api/reservas?grupos_grandes=true
+Realizar clic en send.Si hay reservas con 5 o más de 5 invitados, se recibira un arreglo con las reservas correspondientes y el detalle, caso contrario , arrojara el mensaje:
+"No hay reservas para invitados con grupos sobre 5 personas".
+
+
+
+
+***Nota importante: En todos los request, una vez se cree el metodo, siempre guardar **
+
+
+
+
+
 
 
 
