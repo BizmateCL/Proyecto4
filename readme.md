@@ -157,16 +157,13 @@ Crear un nuevo request en postman con el metodo GET. La url es la siguiente:
 http://localhost:3000/api/reservas?hotel=Hotel Paraíso
 Posteriormente realizar clic en send, y los resultados de las reservas filtradas mostraran las reservas del "Hotel Paraiso".
 
-***9. METODO GET : FILTRAR POR GRUPOS GRANDES DE HUESPEDES(> A 5 PERSONAS)  ***
+***9. METODO GET : FILTRAR POR GRUPOS GRANDES DE HUESPEDES(> A 5 PERSONAS)***
 Crear una nueva request y configurar el metodo get.Para ello, ingresar el siguiente link en postman:
 http://localhost:3000/api/reservas?grupos_grandes=true
 Realizar clic en send.Si hay reservas con 5 o más de 5 invitados, se recibira un arreglo con las reservas correspondientes y el detalle, caso contrario , arrojara el mensaje:
 "No hay reservas para invitados con grupos sobre 5 personas".
 
-
-
-
-***Nota importante: En todos los request, una vez se cree el metodo, siempre guardar **
+***Nota importante: En todos los request, una vez se cree el metodo, siempre guardar***
 
 
 
